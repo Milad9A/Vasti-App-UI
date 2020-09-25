@@ -35,8 +35,8 @@ List<Book> books = [
     author: 'Zi Sun',
     description:
         'CHUAN, adding that there were two other CHUAN besides. This has brought forth a theory, that the bulk of these 82 chapters consisted of other writings of Sun Tzu -- we should call them apocryphal -- similar to the WEN TA, of which a specimen dealing with the Nine Situations [15] is preserved in the T`UNG TIEN, and another in Ho Shin\'s commentary. It is suggested that before his interview with Ho Lu, Sun Tzu had only written the 13 chapters, but afterwards composed a sort of exegesis in the form of question and answer between himself and the King. Pi I-hsun, the author of the SUN TZU HSU LU, backs this up with a quotation from the WU YUEH CH`UN CH`IU: "The King of Wu summoned Sun Tzu, and asked him questions about the art of war. Each time he set forth a chapter of his work, the King could not find words enough to praise him." As he points out, if the whole work was expounded on the same scale as in the above- mentioned fragments, the total number of chapters could not fail to be considerable',
-    percentageOfCompletion: 50,
-    timeSpentReadingInHours: 44,
+    percentageOfCompletion: 61,
+    timeSpentReadingInHours: 71,
   ),
   Book(
     id: 2,

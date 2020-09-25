@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         body: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: <Widget>[
               UserGreeting(
@@ -31,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 20.0),
               UserPointsRow(),
               SizedBox(height: 25.0),
-              MyBooksList(),
+              Expanded(
+                child: HomeScreenBooks(),
+              ),
             ],
           ),
         ),
