@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Vasti UI',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF1D212B),
+        accentColor: Color(0xFFFA784A),
       ),
       home: HomeScreen(currentUser: currentUser),
     );
