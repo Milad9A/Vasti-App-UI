@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vasti/models/models.dart';
+import 'package:vasti/screens/book_screen.dart';
 
 class BookSectionsList extends StatelessWidget {
   const BookSectionsList({
@@ -53,14 +54,26 @@ class BookSectionsList extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(right: 10.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.0),
-                        child: Image(
-                          width: 85.0,
-                          image: AssetImage(
-                            books[index].imageURL,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BookScreen(
+                              book: books[index],
+                            ),
+                          ),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: Image(
+                            width: 85.0,
+                            image: AssetImage(
+                              books[index].imageURL,
+                            ),
                           ),
                         ),
                       ),
