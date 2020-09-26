@@ -61,9 +61,12 @@ class MyBooksList extends StatelessWidget {
                           padding: const EdgeInsets.only(right: 10.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10.0),
-                            child: Image(
-                              image: AssetImage(
-                                books[index].imageURL,
+                            child: Hero(
+                              tag: books[index].imageURL,
+                              child: Image(
+                                image: AssetImage(
+                                  books[index].imageURL,
+                                ),
                               ),
                             ),
                           ),

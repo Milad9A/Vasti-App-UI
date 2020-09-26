@@ -61,9 +61,12 @@ class BookDetails extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Image(
-                      image: AssetImage(book.imageURL),
-                      width: MediaQuery.of(context).size.width * 0.35,
+                    child: Hero(
+                      tag: book.imageURL,
+                      child: Image(
+                        image: AssetImage(book.imageURL),
+                        width: MediaQuery.of(context).size.width * 0.35,
+                      ),
                     ),
                   ),
                   SizedBox(height: 18.0),

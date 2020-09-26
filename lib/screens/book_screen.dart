@@ -16,7 +16,9 @@ class BookScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).primaryColor,
         body: Column(
           children: <Widget>[
-            BookDetails(book: book),
+            Expanded(
+              child: BookDetails(book: book),
+            ),
           ],
         ),
       ),
