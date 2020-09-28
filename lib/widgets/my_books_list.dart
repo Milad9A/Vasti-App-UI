@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vasti/models/models.dart';
-import 'package:vasti/screens/book_screen.dart';
+import 'package:vasti/screens/screens.dart';
 
 class MyBooksList extends StatelessWidget {
   const MyBooksList({
@@ -46,27 +46,24 @@ class MyBooksList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Expanded(
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => BookScreen(
-                                book: books[index],
-                              ),
-                            ),
-                          );
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 10.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
-                            child: Hero(
-                              tag: books[index].imageURL,
-                              child: Image(
-                                image: AssetImage(
-                                  books[index].imageURL,
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => BookScreen(
+                                    book: books[index],
+                                  ),
                                 ),
+                              );
+                            },
+                            child: Image(
+                              image: AssetImage(
+                                books[index].imageURL,
                               ),
                             ),
                           ),
@@ -86,12 +83,6 @@ class MyBooksList extends StatelessWidget {
                                 color: Colors.white38,
                               ),
                               SizedBox(width: 3.0),
-                              // Text(
-                              //   '${books[index].timeSpentReadingInHours.toString()}h',
-                              //   style: TextStyle(
-                              //     color: Colors.white38,
-                              //   ),
-                              // ),
                               Text(
                                 '${Duration(hours: books[index].timeSpentReadingInHours).inDays}d ${books[index].timeSpentReadingInHours % 24}h',
                                 style: TextStyle(

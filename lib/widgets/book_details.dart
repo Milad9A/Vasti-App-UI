@@ -12,7 +12,7 @@ class BookDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.width * 1.2,
+      height: MediaQuery.of(context).size.width * 1.15,
       child: Stack(
         children: <Widget>[
           Image(
@@ -49,7 +49,7 @@ class BookDetails extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20.0),
+              SizedBox(height: 10.0),
               Column(
                 children: <Widget>[
                   Container(
@@ -61,15 +61,12 @@ class BookDetails extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Hero(
-                      tag: book.imageURL,
-                      child: Image(
-                        image: AssetImage(book.imageURL),
-                        width: MediaQuery.of(context).size.width * 0.35,
-                      ),
+                    child: Image(
+                      image: AssetImage(book.imageURL),
+                      width: MediaQuery.of(context).size.width * 0.35,
                     ),
                   ),
-                  SizedBox(height: 18.0),
+                  SizedBox(height: 12.0),
                   Text(
                     book.title,
                     style: TextStyle(
@@ -86,12 +83,12 @@ class BookDetails extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 16.0),
+              SizedBox(height: 6.0),
               Container(
                 margin: EdgeInsets.all(12.0),
                 padding: EdgeInsets.symmetric(
-                  horizontal: 30.0,
-                  vertical: 15.0,
+                  horizontal: 20.0,
+                  vertical: 10.0,
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),

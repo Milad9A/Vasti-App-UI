@@ -15,10 +15,13 @@ class BookScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+            BookDetails(book: book),
             Expanded(
-              child: BookDetails(book: book),
+              child: BookDescription(book: book),
             ),
+            BottomRow(),
           ],
         ),
       ),
